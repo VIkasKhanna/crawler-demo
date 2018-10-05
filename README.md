@@ -57,5 +57,5 @@ spider.crawl();
 
 
 function handleSpiderOutput(resultJson) {
-   console.log(console.log(JSON.stringify(resultJson)));
+   console.log(JSON.stringify(resultJson));
  }
