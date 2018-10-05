@@ -1,6 +1,6 @@
 # crawler-demo
 Basic demonstration only :Node js spider code using recursive method to crawl , test cases and test demo to be run on express. 
-To invoke user set options.startUrl url as entry point and userCallback method which will be invoked with output.json as a param.
+To invoke user set options.startUrl url as entry point and userCallback method which will be invoked with json response as a param.
   
   # Get started
 
