@@ -3,7 +3,7 @@
 
 const Spider = require('../lib/Spider');
 const expect = require('chai').expect;
-// const map = require('lodash/map');
+
 const jsdom = require('jsdom');
 const fs = require('fs');
 // settings for nock to mock http server
@@ -41,7 +41,6 @@ describe('Crawler', function () {
         indexPage = readFile('./web/index.html');
         testPage1 = readFile('./web/testpage1.html');
         testPage2 = readFile('./web/testpage2.html');
-        console.log(indexPage);
         setNock();
 
     });
@@ -53,7 +52,6 @@ describe('Crawler', function () {
                 startUrl: 'http://dummy.com/index.html',
                 crawlLimit: 0,
                 userCallback: (response) => {
-                    console.log(JSON.stringify(response));
                     expect(response).not.to.be.null;
                    expect(response.data.length).to.equal(3);
                    // TODO: add more conditions and make more  exhaustive 

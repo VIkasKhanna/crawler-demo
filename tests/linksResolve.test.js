@@ -3,8 +3,7 @@
 
 const Spider = require('../lib/Spider');
 const expect = require('chai').expect;
-// const map = require('lodash/map');
-const jsdom = require('jsdom');
+
 
 // settings for nock to mock http server
 const nock = require('nock');
@@ -39,7 +38,6 @@ describe('Links', function () {
                 startUrl: 'http://dummy.com/redirect',
                 crawlLimit: 0,
                 userCallback: (response) => {
-                    console.log(JSON.stringify(response));
                     expect(response.data[0].url).to.equal('http://dummy.com/redirect');
                     expect(response.data[0].links[0]).to.equal('http://dummy.com/page/1');
                     expect(response.data[0].links[1]).to.equal('http://dummy.com/page/2');
