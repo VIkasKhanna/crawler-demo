@@ -54,3 +54,8 @@ var Spider = require('./lib/spider');
 spider = new Spider(options);
 // spider();
 spider.crawl();
+
+
+function handleSpiderOutput(resultJson) {
+   console.log(console.log(JSON.stringify(resultJson)));
+ }
