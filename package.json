@@ -2,7 +2,7 @@
   "name": "demo-crawler",
   "version": "0.0.0",
   "description": "demo crawler",
-  "main": "crawler.js",
+  "main": "./lib/Spider.js",
   "author": "Vikas",
   "license": "ISC",
   "dependencies": {
